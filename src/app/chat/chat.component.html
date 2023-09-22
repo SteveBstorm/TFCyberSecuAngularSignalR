@@ -1,0 +1,12 @@
+<h3>Chat</h3>
+Auteur : <input [(ngModel)]="author"><br />
+Message : <input [(ngModel)]="newMessage">
+<button (click)="envoiMessage()">Envoyer</button>
+<button (click)="rejoindreGroup()" [disabled]="disable">Join group</button>
+<button (click)="envoiMessageAuGroup()">Envoi group</button>
+<hr />
+<ul>
+  <li *ngFor="let m of ListeMessage">
+    {{m.author}} : {{m.content}}
+  </li>
+</ul>
